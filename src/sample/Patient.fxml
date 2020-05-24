@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseEntered="#onMouseEntered" prefHeight="508.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Patient">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="751.0">
+         <top>
+            <Pane prefHeight="57.0" prefWidth="751.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="timeLabel" layoutX="279.0" layoutY="9.0" prefHeight="42.0" prefWidth="193.0" text="2018年4月15日 19:41:30">
+                     <font>
+                        <Font name="Microsoft YaHei" size="16.0" />
+                     </font>
+                  </Label>
+                  <Group layoutX="445.0" layoutY="5.0" />
+                  <Group>
+                     <children>
+                        <Label fx:id="welcomeLabel" layoutX="53.0" layoutY="13.0" prefHeight="34.0" prefWidth="193.0" text="患者：">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="5.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/下载%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Group>
+                  <Group layoutX="712.0" layoutY="8.0" />
+                  <JFXTextField fx:id="filterField" layoutX="586.0" layoutY="15.0" prefHeight="26.0" prefWidth="88.0" />
+                  <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="552.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/搜索.jpg" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="SearchButton" buttonType="RAISED" layoutX="684.0" layoutY="14.0" prefHeight="31.0" prefWidth="52.0" ripplerFill="#9ccde8" style="-fx-background-color: #248fcd;" text="搜索" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Pane prefHeight="467.0" prefWidth="751.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Group />
+                        <Group layoutX="31.0" layoutY="317.0" />
+                        <JFXButton fx:id="confirmButton" buttonType="RAISED" layoutX="261.0" layoutY="347.0" onAction="#confirmClick" prefHeight="42.0" prefWidth="76.0" ripplerFill="#9ccde8" style="-fx-background-color: #248fcd;" text="确定" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft YaHei" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="101.0" layoutY="347.0" onAction="#clearClick" prefHeight="42.0" prefWidth="76.0" ripplerFill="#9ccde8" style="-fx-background-color: #248fcd;" text="清除" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <Group layoutX="6.0" layoutY="163.0" />
+                        <Label fx:id="feeTextLabel1" layoutX="139.0" layoutY="235.0" prefHeight="24.0" prefWidth="84.0" text="应缴金额：">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Group layoutX="6.0" layoutY="365.0" />
+                        <Label fx:id="feeLabel1" layoutX="68.0" layoutY="280.0" prefHeight="24.0" prefWidth="71.0" />
+                        <JFXComboBox fx:id="deptBox" editable="true" layoutX="130.0" layoutY="64.0" prefHeight="28.0" prefWidth="188.0" promptText="科室名称" />
+                        <JFXComboBox fx:id="doctorBox" editable="true" layoutX="400.0" layoutY="64.0" prefHeight="28.0" prefWidth="188.0" promptText="医生姓名" />
+                        <JFXComboBox fx:id="typeBox" editable="true" layoutX="130.0" layoutY="149.0" prefHeight="28.0" prefWidth="188.0" promptText="号种类别" />
+                        <JFXComboBox fx:id="nameBox" editable="true" layoutX="400.0" layoutY="149.0" prefHeight="28.0" prefWidth="188.0" promptText="号种名称" />
+                        <Label fx:id="accountTextLabel" layoutX="400.0" layoutY="235.0" prefHeight="24.0" prefWidth="80.0" text="账户余额：">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="accountLabel" layoutX="487.0" layoutY="235.0" prefHeight="24.0" prefWidth="93.0" text="122.00元">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="payAccountLabel" layoutX="224.0" layoutY="235.0" prefHeight="24.0" prefWidth="93.0" text="101.00元">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="feeTextLabel" layoutX="139.0" layoutY="280.0" prefHeight="24.0" prefWidth="84.0" text="交款金额：">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="feeTextLabel11" layoutX="398.0" layoutY="280.0" prefHeight="24.0" prefWidth="84.0" text="找零金额：">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="changeAccountLabel" layoutX="487.0" layoutY="280.0" prefHeight="24.0" prefWidth="93.0" text="199.00元">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="text_pay" layoutX="222.0" layoutY="275.0" prefHeight="23.0" prefWidth="77.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="backButton" buttonType="RAISED" layoutX="418.0" layoutY="347.0" onAction="#backClick" prefHeight="42.0" prefWidth="76.0" ripplerFill="#9ccde8" style="-fx-background-color: #248fcd;" text="注销" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft YaHei" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="closeButton" buttonType="RAISED" layoutX="569.0" layoutY="347.0" onAction="#closeClick" prefHeight="42.0" prefWidth="76.0" ripplerFill="#9ccde8" style="-fx-background-color: #248fcd;" text="退出" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft YaHei" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
